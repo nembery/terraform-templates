@@ -24,6 +24,7 @@ resource "aws_instance" "pavm" {
         delete_on_termination = true
     }
 
+    // this is optional and can probably be removed as we aren't using a provisioner here
     connection {
         user = "admin"
         private_key = "${var.pavm_key_path}"
