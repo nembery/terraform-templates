@@ -17,15 +17,15 @@ labels:
   service_type: aws_terraform
 
 variables:
-  - name: aws_access_key
+  - name: aws_key
     description: AWS Access Key
     default: access_key
     type_hint: text
-  - name: aws_secret_key
+  - name: aws_secret
     description: aws_secret_key
     default: secret
     type_hint: password
-  - name: aws_key_pair_name
+  - name: pavm_key_name
     description: SSH Key Name
     default: ssh_key_pair
     type_hint: text
@@ -33,15 +33,15 @@ variables:
     description: Local SSH Key Path
     default: ssh_key_path
     type_hint: text
-  - name: aws_region
+  - name: region
     description: AWS Region
     default: us-east-2
     type_hint: text
-  - name: aws_az
+  - name: availability_zone
     description: AWS Availability Zone
     default: us-east-2b
     type_hint: text
-  - name: bootstrap_s3_name
+  - name: pavm_bootstrap_s3
     description: Bootstrap S3 Bucket Name
     default: s3-something
     type_hint: text
