@@ -1,10 +1,11 @@
 
-name: AWS Sample
-label: aws_sample
+name: aws_sample
+label: AWS Sample
 description: AWS Sample
 type: terraform
 extends:
 
+# Note the variable names should match between variables.tf and .meta-cnc.yaml
 #access_key="{{ aws_access_key }}"
 #secret_key="{{ aws_secret_key }}"
 #pavm_key_name="{{ aws_key_pair_name }}"
@@ -17,13 +18,13 @@ labels:
   service_type: aws_terraform
 
 variables:
-  - name: aws_key
+  - name: access_key
     description: AWS Access Key
     default: access_key
     type_hint: text
-  - name: aws_secret
-    description: aws_secret_key
-    default: secret
+  - name: secret_key
+    description: AWS Secret Key
+    default:
     type_hint: password
   - name: pavm_key_name
     description: SSH Key Name
@@ -50,3 +51,4 @@ snippets:
   - name: tfvars
     file: terraform.tfvars.j2
     dest: terraform.tfvars
+
